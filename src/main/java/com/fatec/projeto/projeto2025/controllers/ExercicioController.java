@@ -11,7 +11,6 @@ public class ExercicioController {
 
 
     @GetMapping("/ex5/{idade}")
-   
     public String classificaIdade(@PathVariable int idade){
  
         if (idade > 0 && idade < 12){
@@ -25,10 +24,9 @@ public class ExercicioController {
         }else{
             return "Idade inválida";
         }
- 
     }
+
     @GetMapping("/ex1/{numero}")
-   
     public String numeroparimpar(@PathVariable int numero){
         if (numero>=0) {
             if (numero % 2 == 0){
@@ -41,8 +39,8 @@ public class ExercicioController {
             
         }
     }
+
     @GetMapping("/ex2/{peso}/{altura}")
-   
     public String calculadora (@PathVariable double peso, @PathVariable double altura){
         double imc;
         imc = peso / (altura*altura);
@@ -63,11 +61,7 @@ public class ExercicioController {
         }else{
             return "valor inválido";
         }
-       
     }
-
-
-
  
     /*@GetMapping ("")
     public String HelloWorld(){
